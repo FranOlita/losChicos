@@ -18,6 +18,8 @@ header{
 
 body{
     background-color: rgb(201, 201, 201);
+   
+   
 }
 
 nav{
@@ -158,16 +160,15 @@ transform: scale(2) ;
     background-color: rgb(245, 56, 56);
     text-align: center;
     padding: 20px;
-    margin-bottom: 1px;
     grid-area: publicidad;
 }
 
 .grid{
     display: grid; 
     grid-template-areas: "producto1 producto1  texto1"
-                         "texto2  producto2 producto2"
                          "publicidad publicidad publicidad"
-                         "footer footer footer";
+                         "texto2  producto2 producto2";
+                        
     height: 650px;                     
     background-color: gray;
     border: 1px solid black;
