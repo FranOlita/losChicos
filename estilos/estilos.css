@@ -1,99 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300&family=Roboto+Slab:wght@100&display=swap');
 
-
 *{
     padding: 0;
     margin: 0;
 }
 
 html{
-    font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
-body{
-    background-color: rgb(201, 201, 201);
-     
+a {
+	text-decoration: none;
+	outline: none;
 }
 
-nav{
-    background-color:rgba(197, 197, 197, 0.918) ;
-    margin-bottom: 10px;
-    
-    grid-area: nav;
-}
-  
-
-
-
-.section{
-    background-color: rgb(197, 197, 197, 0.918);
-    grid-area: section;
+a:hover {
+	text-decoration: underline;
 }
 
+body {
+    font-family: 'Noto Sans JP', sans-serif;	
+	background: #f2f2f2;
+    background-color: rgb(201, 201, 201); 
+}
 footer{
     background-color: rgb(245, 47, 47);
     font-size: 140%;
     padding: 10px;
     margin-bottom: 0%;
+    margin-top: 1,5em;
     grid-area: footer;
 }
-
-article{
-
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-}
-
-
-li{
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-}
-
-a{
-    text-decoration: none;
-    font-size: medium;
-}
-
-.barraDeNavegacionIndex{
-    color: rgb(117, 117, 117);
-   
-}
-
-nav ul li {
-   width: 175px;
-    background-color: rgb(146, 146, 146);
-  display: inline-block;
-     
-}
-
-.navegacionBarra{
-    width: 175px;
-    color: black;
-    display: flex;
-    justify-content: space-evenly;
-    display: inline-block;
-   padding: 3px;  
-}
-
-.tituloEjemplo{
-  color:black;  
-    font-size: 250%;
-    font-family: 'Hind Siliguri', sans-serif;
-    margin-top: 10px;
-}
-.textoEjemplo{
-    color: black;
-    font-size: 190%;
-    font-family: 'Hind Siliguri', sans-serif;
-    padding: 20px;
-    border: 10px solid rgb(90, 88, 88);
-    margin: 5px;
-    bottom: 30px;
-}
-
 
 .cuerpoContacto{
     padding: 40px;
@@ -102,14 +39,131 @@ nav ul li {
     font-size: 190%;
     font-family:'Hind Siliguri', sans-serif ;
 }
+.flex-container{
+    border: 1px solid whitesmoke;
+    background: #ccc;
+    padding: 20px;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    width: 80%;
+    height: 600px;
+    margin: 0 auto;
+    display: flex;
+}
+.caja{
+    border: 1px solid rgb(8, 8, 8);
+    background-color: whitesmoke;
+    color: #000;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    width: 400px;
+    height: 400px;
+    text-align: center;
+    margin: 5px;
+    padding: 10px;
 
-.estante:hover , .estanteChocolate:hover{
-transform: scale(2) ;
 }
 
-.estante , .estanteChocolate{
-    transition-property: all ;
-    transition-duration: 2,5s;
+.navbar {
+	background: #FFCD48;
+	position: sticky;
+	top: 0%;
+}
+
+.navbar a {
+	color: #fff;
+	display: inline-block;
+	padding: 20px;
+	width: 100%;
+	text-align: center;
+	color: #000;
+	transition: .3s ease-out all;
+}
+
+.navbar a:hover {
+	background: rgb(245, 47, 47);
+	color: #fff;
+	text-decoration: none;
+}
+
+.contenedor {
+	max-width: 1000px;
+	width: 90%;
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
 }
 
 
+main {
+	min-height: 100vh;
+}
+
+main .contenido p {
+	margin-bottom: 20px;
+	line-height: 30px;
+	color: #525151;
+}
+
+main .contenido .titulo {
+    font-family: 'Montserrat', sans-serif;
+	font-weight: normal;
+	padding-top: 40px;
+}
+
+main .contenido .fecha {
+	font-size: 14px;
+	color: #B5B5B5;
+}
+
+aside {
+	min-width: 30%;
+	margin: 40px 20px 20px 0;
+	height: 100%;
+	background: rgb(245, 47, 47);
+	padding: 20px;
+	border-radius: 3px;
+	position: sticky;
+	top: 20px;
+}
+
+aside .titulo {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: normal;
+	font-size: 24px;
+	margin-bottom: 20px;
+	color: #f2f2f2;
+}
+
+aside .indice a {
+	display: block;
+	margin-bottom: 10px;
+	color: #FFCD48;
+}
+
+@media screen and (max-width: 900px){
+	.navbar .contenedor {
+		flex-wrap: wrap;
+		margin: 0;
+		width: 100%;
+	}
+
+	.navbar a {
+		width: auto;
+		flex: 1;
+	}
+
+	.contenedor-imagen {
+		height: 50vh;
+	}
+
+	main .contenedor {
+		flex-direction: column;
+	}
+	aside{
+		position: static;
+		margin: 40xp 0 0 0;
+	}
+}
